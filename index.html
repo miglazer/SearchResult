@@ -47,12 +47,17 @@
             <a href="index.html">Home</a>
         </ul>
     </div>
+    <!-- First row in the form-->
     <div class="row">
         <ul class="col-sm-4">
             <div class="form-group">
                 <label for="product">Product</label>
                 <input class="form-control" type="text" id="product" placeholder="Product">
             </div>
+            <select class="form-control">
+                <option>Category</option>
+                <option>Hello</option>
+            </select>
 
         </ul>
         <ul class="col-sm-4">
@@ -67,6 +72,8 @@
                     </div>
                 </div>
             </div>
+            <input type="range" name="points" min="0" max="10">
+
         </ul>
         <ul class="col-sm-4">
             <div class="form-group">
@@ -75,19 +82,16 @@
             </div>
         </ul>
     </div>
-    <div class="row">
-        <ul class="col-sm-4">
-            <div>
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                    Category <span class="caret"></span>
-                </button>
-            </div>
-        </ul>
+    <!-- End First row in the form-->
+
+    <div class="row center-block">
+        <div class="col-md-2 col-md-offset-5">
+            <button class="form-control" type="submit">Submit</button>
+        </div>
     </div>
 
-    <div class="row">
-        <ul></ul>
-    </div>
+    <br>
+    <br>
 
 
     <div class="row" id="sproducts">
@@ -320,7 +324,7 @@
         $(searchBtn).hide("slow");
         event.preventDefault();
         var searchResultContainer = document.getElementById("sresultContainer");
-        $(sresultContainer).show("slow");
+        $(searchResultContainer).show('slow');
 
     };
 
